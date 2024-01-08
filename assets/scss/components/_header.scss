@@ -1,0 +1,48 @@
+.header {
+    background-color: $white;
+    position: sticky; 
+    top: 0;
+    z-index: 9999;
+
+    .nav {
+        @include flexAlign(space-between, center);
+
+        &-links {
+            ul {
+                @include flexAlign(center, center, row, 32px);
+
+                li {
+                    padding: 29px 0;
+
+                    a {
+                        // font-size: $font-sm;
+                        position: relative;
+                        font-size: $font-sm;
+                        color: $grayishBlue;
+
+                        &::before {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            height: 5px;
+                            left: 0;
+                            right: 0;
+                            bottom: -30px;
+                            @extend %bg-gradient;
+                            opacity: 0;
+                        }
+
+                        &:hover {
+                            color: $darkBlue;
+
+                            &::before {
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

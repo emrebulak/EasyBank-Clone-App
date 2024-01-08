@@ -1,0 +1,47 @@
+.hero {
+    background-color: $veryLightGray;
+    position: relative;
+
+    &-container {
+        @include flexAlign(center, center, row, 50px);
+    }
+
+    &-text {
+        width: 40%;
+        @include flexAlign(center, start, column, 25px);
+
+        h1 {
+            color: $darkBlue;
+            font-size: $font-xlg;
+            font-weight: 400;
+        }
+
+        p {
+            font-size: $font-md;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+
+    }
+
+    &-image {
+        width: 60%;
+        position: relative;
+        height: 41rem;
+
+        & :nth-child(1) {
+            position: absolute;
+            width: 200%;
+            height: 50.25rem;
+        }
+
+        & :nth-child(2) {
+            top: -130px;
+            left: 100px;
+            width: 115%;
+            position: absolute;
+
+        }
+    }
+
+}

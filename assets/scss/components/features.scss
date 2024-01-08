@@ -1,0 +1,49 @@
+.feature{
+    background-color: $lightGrayishBlue;
+
+    &-container{
+        @include flexAlign(center, start, column, 40px);
+
+        h2{
+            color: $darkBlue;
+            line-height: 1.15; 
+            font-weight: 400;
+            font-size: $font-lg;
+        }
+
+        p{
+            color: $grayishBlue;
+            font-size: $font-md;
+            font-weight: 300;
+            line-height: 1.5;
+            max-width: 650px;
+        }
+    }
+
+    &-items{
+        @include flexAlign(center, start, row, 40px);
+        margin-top: 15px;
+
+        &-element{
+            @include flexAlign(center, start, column, 20px);
+
+            img{
+                margin-bottom: 20px;
+            }
+
+            h3{
+                color: $darkBlue;
+                font-size: 23px;
+                font-weight: 400;
+            }
+
+            p{
+                color: $grayishBlue;
+                font-size: $font-sm;
+                font-weight: 300;
+                line-height: 1.5;
+                max-width: 250px;
+            }
+        }
+    }
+}

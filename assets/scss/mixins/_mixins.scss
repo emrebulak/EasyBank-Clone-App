@@ -1,0 +1,8 @@
+@mixin flexAlign($justify: center, $align: center, $direction: row, $gap: 0px, $wrap: nowrap) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    gap: $gap;
+}
