@@ -1,0 +1,67 @@
+.footer {
+  padding: 45px 0;
+  background-color: $darkBlue;
+  color: $white;
+
+  &-container {
+    @include flexAlign(space-between, center);
+
+    @include responsive(desktop) {
+      flex-direction: column;
+
+      .footer-box-first {
+        gap: 5px;
+      }
+
+      .footer-box-second,
+      .footer-box-third {
+        @include flexAlign(start, center, column, 5px);
+        width: 100%;
+      }
+    }
+
+    .footer-box-first {
+      @include flexAlign(start, start, column, 50px);
+
+      .footer-social {
+        @include flexAlign(center, center, row, 10px);
+        cursor: pointer;
+
+        a {
+          color: $white;
+          font-size: $font-md;
+
+          &:hover {
+            color: $limeGreen;
+          }
+        }
+      }
+    }
+
+    .footer-box-second,
+    .footer-box-third {
+      ul {
+        @include flexAlign(center, start, column, 30px);
+        li {
+          a {
+            font-size: $font-md;
+            color: white;
+
+            &:hover {
+              color: $limeGreen;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-box-fourth {
+      @include flexAlign(start, start, column, 40px);
+
+      p {
+        font-size: $font-sm;
+        color: $grayishBlue;
+      }
+    }
+  }
+}

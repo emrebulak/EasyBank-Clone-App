@@ -6,3 +6,23 @@
     flex-wrap: $wrap;
     gap: $gap;
 }
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 750px) {
+            @content;
+        }
+    } @else if $breakpoint == tablet {
+        @media (max-width: 900px) {
+            @content;
+        }
+    } @else if $breakpoint == desktop {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    } @else if $breakpoint == large {
+        @media (max-width: 1800px) {
+            @content;
+        }
+    }
+}

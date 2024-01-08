@@ -44,5 +44,27 @@
                 }
             }
         }
+
+        .bar{
+            display: none;
+            padding: 15px 0;
+
+            i{
+                font-size: $font-lg;
+            }
+        }
+
+        @include responsive(phone) {
+           &-links, &-invite-container{
+               display: none;
+           }
+
+              .bar{
+                display: block;
+                cursor: pointer;
+              }
+
+        }
+        
     }
 }

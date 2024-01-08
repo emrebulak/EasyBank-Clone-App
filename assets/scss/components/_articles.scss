@@ -14,10 +14,15 @@
     &-items{
         display: flex;
         gap: 40px;
+        flex-wrap: wrap;
 
         &-element{
             background-color: $white;
             width: 22%;
+            @include responsive(desktop) {
+                width: 45%;
+    
+            }
             border-radius: 14px;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             cursor: pointer;

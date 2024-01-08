@@ -22,6 +22,11 @@
 
     &-items{
         @include flexAlign(center, start, row, 40px);
+
+        @include responsive(desktop){
+           flex-wrap: wrap;
+        }
+
         margin-top: 15px;
 
         &-element{

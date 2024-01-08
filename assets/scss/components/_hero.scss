@@ -4,11 +4,28 @@
 
     &-container {
         @include flexAlign(center, center, row, 50px);
+        @include responsive(desktop) {
+            flex-direction: column-reverse;
+            gap: 0px !important;
+        }
     }
 
     &-text {
         width: 40%;
         @include flexAlign(center, start, column, 25px);
+        @include responsive(desktop) {
+            width: 100%;
+            align-items: center;
+
+            h1{
+                font-size: $font-lg !important;
+            }
+
+            p{
+                text-align: center;
+                font-size: $font-sm;
+            }
+        }
 
         h1 {
             color: $darkBlue;
@@ -26,6 +43,33 @@
 
     &-image {
         width: 60%;
+        @include responsive(desktop) {
+            width: 100%;
+            & :nth-child(1) {
+                width: 100% !important;
+                height: 80% !important;
+            }
+
+            & :nth-child(2) {
+                left: 250px !important;
+                width: 50% !important;
+            }
+
+        }
+
+        @include responsive(phone) {
+            width: 100%;
+            & :nth-child(1) {
+                width: 100% !important;
+                height: 80% !important;
+            }
+
+            & :nth-child(2) {
+                left: 5px !important;
+                width: 100% !important;
+            }
+
+        }
         position: relative;
         height: 41rem;
 
